@@ -1,0 +1,11 @@
+version: '2'
+services:
+  db:
+    image: postgres:10.3-alpine
+    ports:
+      - 45432:5432
+    tmpfs: /var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=test
